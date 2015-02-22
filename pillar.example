@@ -1,0 +1,29 @@
+exim:
+  config:
+    # See http://pkg-exim4.alioth.debian.org/README/update-exim4.conf.8.html for details.
+    configtype: 'satellite'
+    hide_mailname: 'true'
+    ue4c_keepcomments: 'true'
+    localdelivery: 'mail_spool'
+    local_interfaces: ''
+    minimaldns: 'false'
+    other_hostnames: ''
+    readhost: ''
+    relay_domains: ''
+    relay_nets: ''
+    smarthost: ''
+  files:
+    # Name all files which should be put under the corresponding
+    # split config directory
+    # Source files must be placed in an exim directory under file_roots
+    # e.g. /srv/salt/files/exim/
+    main:
+      - file1
+      - file 2  
+    acl:
+    router:
+    transport:
+    retry:
+      - file3
+    rewrite:
+    auth:
