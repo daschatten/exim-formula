@@ -1,6 +1,6 @@
 {% set map = salt['grains.filter_by']({
     'Debian': {
-        'pkgs': ['exim4-daemon-light:'],
+        'pkgs': ['exim4-daemon-light'],
         'service': 'exim4',
         'config_dir': '/etc/exim4',
         'config_file': 'update-exim4.conf.conf',
