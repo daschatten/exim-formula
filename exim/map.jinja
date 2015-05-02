@@ -6,4 +6,4 @@
         'config_file': 'update-exim4.conf.conf',
         'sub_dirs': ['main', 'acl', 'router', 'transport', 'retry', 'rewrite', 'auth'],
     },
-}, grain='os', merge=salt['pillar.get']('exim:lookup')) %}
+}, grain='os', merge=salt['pillar.get']('exim:lookup'), default='Debian') %}

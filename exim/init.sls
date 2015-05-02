@@ -24,17 +24,17 @@ exim_install_packages:
 {{ map.config_dir }}/{{ map.config_file }}:
   file.managed:
     - contents: |
-        dc_eximconfig_configtype={{ configtype }}
-        dc_hide_mailname={{ hide_mailname }}
-        ue4c_keepcomments={{ ue4c_keepcomments }}
-        dc_localdelivery={{ localdelivery }}
-        dc_local_interfaces={{ local_interfaces }}
-        dc_minimaldns={{ minimaldns }}
-        dc_other_hostnames={{ other_hostnames }}
-        dc_readhost={{ readhost }}
-        dc_relay_domains={{ relay_domains }}
-        dc_relay_nets={{ relay_nets }}
-        dc_smarthost={{ smarthost }}
+        dc_eximconfig_configtype='{{ configtype }}'
+        dc_hide_mailname='{{ hide_mailname }}'
+        ue4c_keepcomments='{{ ue4c_keepcomments }}'
+        dc_localdelivery='{{ localdelivery }}'
+        dc_local_interfaces='{{ local_interfaces }}'
+        dc_minimaldns='{{ minimaldns }}'
+        dc_other_hostnames='{{ other_hostnames }}'
+        dc_readhost='{{ readhost }}'
+        dc_relay_domains='{{ relay_domains }}'
+        dc_relay_nets='{{ relay_nets }}'
+        dc_smarthost='{{ smarthost }}'
     - watch_in:
       - service: {{ map.service }}
 
